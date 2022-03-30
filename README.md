@@ -16,11 +16,12 @@ To use this repository you have to follow the instructions!
 - Create a subgraph on the main dashboard
 - Run the following command in your terminal (Requirements Node.js, Graph CLI, Access_token of your thegraph account)
 
-`
+```
 npm install
 
 graph build 
 
 graph auth --product hosted-service <ACCESS_TOKEN>
 
-graph deploy --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>`
+graph deploy --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
+```
