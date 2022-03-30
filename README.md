@@ -15,6 +15,7 @@ To use this repository you have to follow the instructions!
 - Clone this repository
 - Create a subgraph on the main dashboard
 - Run the following command in your terminal (Requirements Node.js, Graph CLI, Access_token of your thegraph account)
+
 `
 npm install
 graph build 
