@@ -18,6 +18,9 @@ To use this repository you have to follow the instructions!
 
 `
 npm install
+
 graph build 
+
 graph auth --product hosted-service <ACCESS_TOKEN>
+
 graph deploy --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>`
