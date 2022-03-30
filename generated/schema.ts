@@ -57,6 +57,23 @@ export class Token extends Entity {
     this.set("tokenID", Value.fromBigInt(value));
   }
 
+  get contract(): string | null {
+    let value = this.get("contract");
+    if (!value || value.kind == ValueKind.NULL) {
+      return null;
+    } else {
+      return value.toString();
+    }
+  }
+
+  set contract(value: string | null) {
+    if (!value) {
+      this.unset("contract");
+    } else {
+      this.set("contract", Value.fromString(<string>value));
+    }
+  }
+
   get contentURI(): string | null {
     let value = this.get("contentURI");
     if (!value || value.kind == ValueKind.NULL) {

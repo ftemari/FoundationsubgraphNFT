@@ -1,6 +1,7 @@
 type Token @entity {
   id: ID!
   tokenID: BigInt!
+  contract: String
   contentURI: String
   tokenIPFSPath: String
   name: String!

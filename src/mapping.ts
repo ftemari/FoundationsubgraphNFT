@@ -6,6 +6,7 @@ import {
 import {
   Token, User
 } from '../generated/schema'
+import { Address } from "@graphprotocol/graph-ts";
 export function handleTransfer(event: TransferEvent): void {
   let token = Token.load(event.params.tokenId.toString());
   if (!token) {
@@ -16,6 +17,7 @@ export function handleTransfer(event: TransferEvent): void {
     token.contentURI = tokenContract.tokenURI(event.params.tokenId);
     token.tokenIPFSPath = tokenContract.getTokenIPFSPath(event.params.tokenId);
     token.name = tokenContract.name();
+    token.contract = Address.fromBytes(event.address).toHexString();
     token.createdAtTimestamp = event.block.timestamp;
   }
   token.owner = event.params.to.toHexString();
