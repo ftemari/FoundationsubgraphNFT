@@ -25,3 +25,5 @@ graph auth --product hosted-service <ACCESS_TOKEN>
 
 graph deploy --product hosted-service <GITHUB_USER>/<SUBGRAPH NAME>
 ```
+- Go to your subgraph on your The Graph account and it should be appear as "Deployed"
+- Well Done!
